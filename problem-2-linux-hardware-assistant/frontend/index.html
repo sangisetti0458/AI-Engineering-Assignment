@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Hardware Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Hardware AI</h2>
+
+            <button id="newChatBtn" class="new-chat-btn">
+                + New Conversation
+            </button>
+
+            <div class="sidebar-info">
+                <p>Linux Hardware Assistant</p>
+                <span>Powered by Gemini AI</span>
+            </div>
+
+            <div class="sidebar-footer">
+                <span>Problem 2 - AI Engineering Assignment</span>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h2>Linux Hardware Assistant</h2>
+                    <p>Ask questions about your computer</p>
+                </div>
+
+                <div id="environmentBadge" class="environment-badge">
+                    Detecting environment...
+                </div>
+            </header>
+
+            <!-- Hardware cards -->
+            <section class="hardware-section">
+
+                <h3>System Overview</h3>
+
+                <div class="hardware-grid">
+
+                    <div class="hardware-card">
+                        <span class="card-icon">⚙️</span>
+                        <h4>Processor</h4>
+                        <p id="cpuInfo">Loading...</p>
+                    </div>
+
+                    <div class="hardware-card">
+                        <span class="card-icon">🧠</span>
+                        <h4>Memory</h4>
+                        <p id="memoryInfo">Loading...</p>
+                    </div>
+
+                    <div class="hardware-card">
+                        <span class="card-icon">💾</span>
+                        <h4>Storage</h4>
+                        <p id="storageInfo">Loading...</p>
+                    </div>
+
+                    <div class="hardware-card">
+                        <span class="card-icon">🖥️</span>
+                        <h4>Graphics</h4>
+                        <p id="gpuInfo">Loading...</p>
+                    </div>
+
+                </div>
+
+                <p id="hardwareNote" class="hardware-note"></p>
+
+            </section>
+
+            <!-- Chat section -->
+            <section class="chat-section">
+
+                <div class="chat-heading">
+                    <h3>AI Assistant</h3>
+                    <span>Ask anything about your hardware</span>
+                </div>
+
+                <div id="chatMessages" class="chat-messages">
+
+                    <div class="message assistant-message">
+                        Hello! I'm your Linux Hardware Assistant.
+                        I can inspect your CPU, memory, storage and GPU.
+                        What would you like to know?
+                    </div>
+
+                </div>
+
+                <form id="chatForm" class="chat-form">
+
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Ask about your computer..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="sendBtn">
+                        Send
+                    </button>
+
+                </form>
+
+                <p class="footer-note">
+                    Hardware information is collected using approved
+                    read-only system inspection tools.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

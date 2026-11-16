@@ -1,0 +1,290 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6fb;
+    color: #202938;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    background: #172033;
+    color: white;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 23px;
+    margin-bottom: 35px;
+}
+
+.new-chat-btn {
+    padding: 13px;
+    border: 1px solid #53617a;
+    background: #27354d;
+    color: white;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.new-chat-btn:hover {
+    background: #354663;
+}
+
+.sidebar-info {
+    margin-top: 35px;
+    line-height: 1.8;
+}
+
+.sidebar-info p {
+    font-size: 14px;
+}
+
+.sidebar-info span,
+.sidebar-footer {
+    color: #aab4c5;
+    font-size: 12px;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    line-height: 1.6;
+}
+
+/* Main content */
+
+.main-content {
+    flex: 1;
+    padding: 32px 45px;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.topbar h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.topbar p {
+    color: #7b8494;
+    font-size: 14px;
+}
+
+.environment-badge {
+    background: #e0f5e9;
+    color: #167544;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Hardware cards */
+
+.hardware-section h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.hardware-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.hardware-card {
+    background: white;
+    padding: 22px;
+    border: 1px solid #e8ebf1;
+    border-radius: 13px;
+    min-height: 145px;
+    box-shadow: 0 3px 12px rgba(20, 35, 60, 0.04);
+}
+
+.card-icon {
+    font-size: 25px;
+}
+
+.hardware-card h4 {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.hardware-card p {
+    font-size: 13px;
+    color: #737d8d;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.hardware-note {
+    margin-top: 15px;
+    color: #85631a;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Chat */
+
+.chat-section {
+    background: white;
+    margin-top: 30px;
+    border: 1px solid #e8ebf1;
+    border-radius: 14px;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-heading {
+    padding: 20px 24px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.chat-heading h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.chat-heading span {
+    font-size: 13px;
+    color: #8490a0;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 24px;
+    min-height: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 13px 17px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    max-width: 80%;
+    line-height: 1.7;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.assistant-message {
+    background: #f0f3f9;
+    color: #27354b;
+}
+
+.user-message {
+    background: #263c65;
+    color: white;
+    margin-left: auto;
+}
+
+/* Chat input */
+
+.chat-form {
+    display: flex;
+    gap: 12px;
+    padding: 18px 22px;
+    border-top: 1px solid #edf0f5;
+}
+
+.chat-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #dce1e9;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+}
+
+.chat-form input:focus {
+    border-color: #536fa8;
+}
+
+.chat-form button {
+    padding: 0 24px;
+    border: none;
+    border-radius: 9px;
+    background: #263c65;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.chat-form button:hover {
+    background: #385582;
+}
+
+.chat-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.footer-note {
+    padding: 0 22px 17px;
+    color: #929baa;
+    font-size: 11px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1000px) {
+    .hardware-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        padding: 22px 15px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hardware-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .hardware-card {
+        padding: 15px;
+    }
+
+    .message {
+        max-width: 95%;
+    }
+}
